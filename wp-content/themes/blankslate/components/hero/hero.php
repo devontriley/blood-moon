@@ -1,8 +1,8 @@
 <?php
 
-var $fullImg = get_row_layout() == 'full_image';
-var $fullMedia = get_row_layout() == 'full_media';
-var $fiftyFifty = get_row_layout() == '5050';
+$fullImg = get_row_layout() == 'full_image';
+$fullMedia = get_row_layout() == 'full_media';
+$fiftyFifty = get_row_layout() == '5050';
 
 if(have_posts()) : while(have_posts()) : the_post();
 
