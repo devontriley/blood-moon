@@ -11,7 +11,7 @@ $hasButton = get_sub_field('has_button');
 ?>
 
 <div class="hero">
-    <div class="inner">
+    <div class="inner <?php echo $imgPosition == "Left" ? "image-left" : "image-right"; ?>">
 
         <?php if($heroImg){
             echo '<div class="img-wrapper">';
