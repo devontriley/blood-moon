@@ -4,6 +4,8 @@ function button($id = null, $text = null, $class = null) {
     $btnLink = get_sub_field('button_link');
     $btnText = get_sub_field('button_text');
     $btnPath = get_sub_field('button_path');
+    $url = $btnPath ? get_permalink($btnPath) : $btnLink;
+
     if($btnPath) $btnPath = $btnPath[0];
 
     if($id) {
@@ -12,15 +14,13 @@ function button($id = null, $text = null, $class = null) {
 
     if($text) {
         $btnText = $text;
-    }
+    } ?>
 
-    $url = $btnPath ? get_permalink($btnPath) : $btnLink;
-
-    echo '<div class="btn-wrap '. $class .'">';
-    echo '<a class="btn" href="'. $url .'">';
-    echo '<span>' . $btnText . '</span>';
-    echo '</a>';
-    echo '</div><!-- .btn-wrap -->';
+    <div class="btn-wrap <?php echo $class ?>">
+        <a class="btn" href="<?php echo $url ?>">
+            <span><?php echo $btnText ?></span>
+        </a>
+    </div><!-- .btn-wrap --> <?php
 }
 
 ?>

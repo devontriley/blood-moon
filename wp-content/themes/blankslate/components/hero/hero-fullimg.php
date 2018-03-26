@@ -1,42 +1,27 @@
 <?php
 
-$heroHeader = get_sub_field('hero_header');
-$heroSubheader = get_sub_field('hero_subheader');
-$heroImg = get_sub_field('hero_image');
-$fullHeroImg = wp_get_attachment_image($heroImg, 'full');
-$imgPosition = get_sub_field('hero_image_position');
-$heroGraphic = get_sub_field('hero_graphic');
-$hasButton = get_sub_field('has_button');
+if($heroImg){
+    echo $fullHeroImg;
+} ?>
 
-?>
+<div class="text-wrapper">
 
-<div class="hero">
-    <div class="inner">
+    <?php if($heroHeader){ ?>
+        <h1 class="header"><?php echo $heroHeader ?></h1> <?php
+    }
 
-        <?php if($heroImg){
-            echo $fullHeroImg;
-        }
+    if($heroSubheader){ ?>
+        <p class="subheader"><?php echo $heroSubheader ?></p> <?php
+    }
 
-        echo '<div class="text-wrapper">';
-        if($heroHeader){
-            echo '<h1 class="header">'. $heroHeader .'</h1>';
-        }
+    if($heroGraphic){
+        echo $heroGraphic;
+    }
 
-        if($heroSubheader){
-            echo '<p class="subheader">'. $heroSubheader .'</p>';
-        }
+    if($hasButton){ ?>
+        <div class="button-container">
+        <?php button(); ?>
+        </div><!-- button-container --> <?php
+    } ?>
 
-        if($heroGraphic){
-            echo $heroGraphic;
-        }
-
-        if($hasButton){
-            echo '<div class="button-container">';
-            button();
-            echo '</div><!-- button-container -->';
-        }
-        echo '</div> <!-- .text-wrapper -->'; ?>
-
-    </div> <!-- .inner -->
-</div> <!-- .hero -->
-
+</div> <!-- .text-wrapper -->
