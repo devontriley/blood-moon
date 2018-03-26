@@ -1,5 +1,5 @@
 <?php
-//echo 'TEST';
+
 if(have_rows('components')) :
     while(have_rows('components')) :
         the_row();

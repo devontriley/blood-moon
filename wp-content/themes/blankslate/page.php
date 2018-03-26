@@ -4,7 +4,7 @@
     <br>
     <a href="http://localhost/barbatest/page-3" style="margin-top: 1000px; display: block;">Page 3</a>
     <br>
-    <a href="http://www.google.com">GOOGLE HI</a>
+    <a href="http://www.google.com">GOOGLE</a>
 
     <?php include('components/components.php'); ?>
 
