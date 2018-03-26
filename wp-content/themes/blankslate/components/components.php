@@ -12,6 +12,4 @@ if(have_rows('components')) :
     endwhile;
 endif;
 
-
-
 ?>

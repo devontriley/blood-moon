@@ -1,4 +1,5 @@
 <?php
+// find variables in hero.php
 
 if($heroImg){
     echo $fullHeroImg;

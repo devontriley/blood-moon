@@ -1,4 +1,5 @@
 <?php
+// find variables in hero.php
 
 if($heroImg){ ?>
     <div class="img-wrapper"> <?php
