@@ -14,14 +14,7 @@ $hasButton = get_sub_field('has_button');
 $btnLink = get_sub_field('button_link');
 $btnPath = get_sub_field('button_path');
 
-//alt grid specific variables
-$imgBlockBackground = get_sub_field('img_block_background_image');
-$imgBlockHeader = get_sub_field('img_block_header');
-$imgBlockContent = get_sub_field('img_block_content');
-$textBlockHeader = get_sub_field('text_block_header');
-$textBlockContent = get_sub_field('text_block_content');
-
-//icon grid specific variables - will be in repeater submodule
+//alt grid and icon grid specific variables - will be in repeater submodule
 $colIcon = get_sub_field('col_icon');
 $iconFiletype = wp_check_filetype($colIcon);
 $colHeader = get_sub_field('col_header');
