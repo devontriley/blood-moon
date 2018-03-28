@@ -39,7 +39,8 @@ $hasButton = get_sub_field('has_button');
         // 50/50 image hero
         if( $fiftyFifty ){
             include('hero-5050.php');
-        } ?>
+        }
+        ?>
 
     </div> <!-- .inner -->
 </div> <!-- .hero -->
