@@ -46,16 +46,19 @@ if( have_rows('alt_grid_row') ):
                     <?php if($textBlockHeader){ ?>
                         <div class="text-block-header">
                             <?php echo $textBlockHeader; ?>
-                        </div><!-- .text-block-header --!><?php
+                        </div><!-- .text-block-header --><?php
                     } ?>
 
-                    <?php if($textBlockContent){
-                        // why is this commenting out divs?? troubleshoot
+                    <?php if($textBlockContent){ ?>
+                        <div class="text-block-content">
+                            <?php echo $textBlockContent; ?>
+                        </div><!-- .text-block-content --><?php
                     }
 
                     if($has_button){
                         button();
                     } ?>
+
                 </div><!-- .text-inner -->
             </div><!-- .text-block -->
 
