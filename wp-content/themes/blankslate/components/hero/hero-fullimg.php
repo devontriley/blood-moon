@@ -1,9 +1,9 @@
 <?php
 // find variables in hero.php
 
-if($heroImg){
-    echo $fullHeroImg;
-} ?>
+//if($heroImg){
+//    echo $fullHeroImg;
+//} ?>
 
 <div class="text-wrapper">
 

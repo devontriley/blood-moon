@@ -1,0 +1,24 @@
+.full_image {
+  position: relative;
+  min-height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner {
+    padding: 40px 20px;
+    margin: 0 auto;
+    width: 80vw;
+    max-width: 1000px;
+
+    .text-wrapper {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+

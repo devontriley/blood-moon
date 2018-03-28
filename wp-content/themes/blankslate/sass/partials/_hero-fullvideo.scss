@@ -1,18 +1,24 @@
-.inner {
-  position: relative;
+.full_video {
+  .inner {
+    position: relative;
 
-  .ytWrapper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+    .ytWrapper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
 
-  .text-wrapper {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.2);
+    .text-wrapper {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.4);
+    }
   }
 }
+
