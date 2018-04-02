@@ -8,7 +8,6 @@ if( have_rows('alt_grid_row') ):
         <div class="row-inner">
             <?php
             //repeater vars
-            $clickableRow = get_sub_field('clickable_row');
             $imgBlockBackground = get_sub_field('img_block_background_image');
             $fullImgBlockBackground = wp_get_attachment_image($imgBlockBackground["id"], 'full');
             $imgBlockHeader = get_sub_field('img_block_header');
@@ -22,7 +21,7 @@ if( have_rows('alt_grid_row') ):
                 <a href="<?php echo $url; ?>" class="cover-link"></a> <?php
             } ?>
 
-            <div class="img-block">
+            <div class="img-block <?php $iteration % 2 !== 0 ? echo 'right' : echo 'left';?>">
                 <?php if($imgBlockBackground){
                     echo $fullImgBlockBackground;
                 }
@@ -62,8 +61,7 @@ if( have_rows('alt_grid_row') ):
                 </div><!-- .text-inner -->
             </div><!-- .text-block -->
 
-        </div><!-- .row-inner -->
-    <?php
+        </div><!-- .row-inner --> <?php
     endwhile; // while alt grid row has rows
 endif; // if alt grid row has rows
 

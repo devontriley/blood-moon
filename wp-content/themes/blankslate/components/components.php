@@ -8,6 +8,10 @@ if(have_rows('components')) :
             case 'hero':
             include('hero/hero.php');
             break;
+
+            case 'grid':
+            include('grid/grid.php');
+            break;
         }
     endwhile;
 endif;

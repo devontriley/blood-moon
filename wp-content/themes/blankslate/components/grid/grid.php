@@ -14,14 +14,8 @@ $hasButton = get_sub_field('has_button');
 $btnLink = get_sub_field('button_link');
 $btnPath = get_sub_field('button_path');
 
-//alt grid and icon grid specific variables - will be in repeater submodule
-$colIcon = get_sub_field('col_icon');
-$iconFiletype = wp_check_filetype($colIcon);
-$colHeader = get_sub_field('col_header');
-$colContent = get_sub_field('col_content');
-$isLink = get_sub_field('link_option');
-$linkSrc = get_sub_field('link_source');
-// add i variable
+//alt grid
+$clickableRow = get_sub_field('clickable_row'); // stil need to add
 
 //post grid specific variables
 $postOrigin = get_sub_field('post_origin');
@@ -30,28 +24,48 @@ $choiceOrigin = get_sub_field('post_origin') == 'choice';
 $postType = get_sub_field('post_type');
 $postQuantity = get_sub_field('post_quantity');
 $postOrder = get_sub_field('post_order');
+$postOrderby = get_sub_field('post_orderby');
+$postSelection = get_sub_field('post_selection');
 
 ?>
 
 <div class="grid <?php if($gridLayout){echo $gridLayout; } ?>">
     <div class="inner">
 
+        <!-- add title, subtitle, etc here -->
+
         <?php
-        // alternating grid
+        if($gridHeader){ ?>
+            <p class="header">
+                <?php echo $gridHeader; ?>
+            </p><?php
+        }
+
+        if($gridSubheader){ ?>
+            <p class="subheader">
+            <?php echo $gridSubheader; ?>
+            </p><?php
+        }
+
+        // alternating grid layout
         if($altGrid){
             include('grid-alt.php');
         }
 
-        // icon grid
+        // icon grid layout
         if($iconGrid){
             include('grid-icon.php');
         }
 
-        // post grid
+        // post grid layout
         if($postGrid){
             include('grid-post.php');
         }
-        ?>
+
+        // bottom button option
+        if($hasButton){
+            button();
+        } ?>
 
     </div> <!-- .inner -->
 </div><!-- .grid -->
