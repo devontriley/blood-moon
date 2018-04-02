@@ -10,6 +10,7 @@ if( have_rows('alt_grid_row') ):
             //repeater vars
             $imgBlockBackground = get_sub_field('img_block_background_image');
             $fullImgBlockBackground = wp_get_attachment_image($imgBlockBackground["id"], 'full');
+            $imageOrientation = $iteration % 2 !== 0 ? 'right' : 'left';
             $imgBlockHeader = get_sub_field('img_block_header');
             $imgBlockContent = get_sub_field('img_block_content');
             $textBlockHeader = get_sub_field('text_block_header');
@@ -21,7 +22,7 @@ if( have_rows('alt_grid_row') ):
                 <a href="<?php echo $url; ?>" class="cover-link"></a> <?php
             } ?>
 
-            <div class="img-block <?php $iteration % 2 !== 0 ? echo 'right' : echo 'left';?>">
+            <div class="img-block <?php echo $imageOrientation; ?>">
                 <?php if($imgBlockBackground){
                     echo $fullImgBlockBackground;
                 }
