@@ -34,9 +34,9 @@ if( have_rows('alt_grid_row') ):
                 }
 
                 if($imgBlockContent){ ?>
-                    <div class="image-block-caption">
-                        <?php echo $imgBLockContent; ?>
-                    </div> <!-- .image-block-caption --> <?php
+                    <div class="image-block-content">
+                        <?php echo $imgBlockContent; ?>
+                    </div> <!-- .image-block-content --> <?php
                 }?>
             </div><!-- .img-block -->
 
@@ -63,6 +63,7 @@ if( have_rows('alt_grid_row') ):
             </div><!-- .text-block -->
 
         </div><!-- .row-inner --> <?php
+        $iteration++;
     endwhile; // while alt grid row has rows
 endif; // if alt grid row has rows
 
