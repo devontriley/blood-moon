@@ -1,6 +1,6 @@
 <?php
 if(have_rows('icon_block')) : ?>
-    <div class="icon-cols-wrapper"> <?php
+    <div class="icon-cols-wrapper col-<?php echo $gridColCount ?>"> <?php
     $iteration = 1;
 
     while(have_rows('icon_block')) : the_row();

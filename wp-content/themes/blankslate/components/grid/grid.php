@@ -35,16 +35,20 @@ $postSelection = get_sub_field('post_selection');
         <!-- add title, subtitle, etc here -->
 
         <?php
-        if($gridHeader){ ?>
-            <p class="header">
-                <?php echo $gridHeader; ?>
-            </p><?php
-        }
+        if($gridHeader || $gridSubheader){ ?>
+            <div class="text-wrapper"> <?php
+                if($gridHeader){ ?>
+                    <p class="header">
+                        <?php echo $gridHeader; ?>
+                    </p><!-- .header --><?php
+                }
 
-        if($gridSubheader){ ?>
-            <p class="subheader">
-            <?php echo $gridSubheader; ?>
-            </p><?php
+                if($gridSubheader){ ?>
+                    <p class="subheader">
+                        <?php echo $gridSubheader; ?>
+                    </p><!-- .subheader --><?php
+                } ?>
+            </div><!-- .text-wrapper--><?php
         }
 
         // alternating grid layout
