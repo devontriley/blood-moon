@@ -11,7 +11,7 @@ $postSelection = get_sub_field('post_selection');
 
 ?>
 
-<div class="post-grid-wrapper"><?php
+<div class="post-grid-wrapper col-<?php echo $gridColCount ?>"><?php
     if($queryOrigin){
         //WP QUERY
         $args = array (
@@ -23,28 +23,28 @@ $postSelection = get_sub_field('post_selection');
 
         $the_query = new WP_Query( $args );
 
-        if ( $the_query->have_posts() ) { ?>
-            <div class="post-grid-inner"> <?php
+        if ( $the_query->have_posts() ) {
             while ( $the_query->have_posts() ) {
                 $the_query->the_post(); ?>
-                <li> <?php echo get_the_title(); ?></li> <?php
-            } ?>
-            </div><!-- .post-grid-inner --><?php
+                <div class="post-block">
+                    <?php echo get_the_title(); ?>
+                </div><?php
+            }
             wp_reset_postdata();
         } else {
             // no posts found
         }
     } elseif($choiceOrigin) {
         // PULL POSTS FROM RELATIONSHIP FIELD
-        if($postSelection){ ?>
+        if($postSelection){
 
-            <div class="post-grid-inner"> <?php
             foreach($postSelection as $gridPost){
                 setup_postdata($gridPost); ?>
-                <li><?php the_title(); ?></li> <?php
+                <div class="post-block">
+                    <li><?php the_title(); ?></li>
+                </div><?php
             } // endforeach
-            wp_reset_postdata(); ?>
-            </div><!-- .post-grid-inner --><?php
+            wp_reset_postdata();
 
         } // if postSelection
     } // elseif choice
