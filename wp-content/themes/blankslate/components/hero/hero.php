@@ -26,20 +26,12 @@ $hasButton = get_sub_field('has_button');
 <div class="hero <?php if($heroLayout){ echo $heroLayout; }?>" <?php if($fullImg){echo 'style= "background-image: url('. $heroImg["url"] .')"';}?>>
     <div class="inner <?php if($fiftyFifty){ echo $positionClass; }?>">
 
-        <?php // full image hero
-        if( $fullImg ){
-            include('hero-fullimg.php');
-        }
+        <?php
+         include('hero-fullimg.php');
 
-        // full video hero
-        if( $fullVideo ){
-            include('hero-fullvideo.php');
-        }
+         include('hero-fullvideo.php');
 
-        // 50/50 image hero
-        if( $fiftyFifty ){
-            include('hero-5050.php');
-        }
+         include('hero-5050.php');
         ?>
 
     </div> <!-- .inner -->
