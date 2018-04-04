@@ -41,7 +41,8 @@ $postSelection = get_sub_field('post_selection');
             foreach($postSelection as $gridPost){
                 setup_postdata($gridPost); ?>
                 <div class="post-block">
-                    <li><?php the_title(); ?></li>
+                    <?php echo get_the_title($gridPost);
+                    echo the_content(); ?>
                 </div><?php
             } // endforeach
             wp_reset_postdata();
