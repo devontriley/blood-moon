@@ -51,20 +51,11 @@ $postSelection = get_sub_field('post_selection');
             </div><!-- .text-wrapper--><?php
         }
 
-        // alternating grid layout
-        if($altGrid){
-            include('grid-alt.php');
-        }
+        include('grid-alt.php');
 
-        // icon grid layout
-        if($iconGrid){
-            include('grid-icon.php');
-        }
+        include('grid-icon.php');
 
-        // post grid layout
-        if($postGrid){
-            include('grid-post.php');
-        }
+        include('grid-post.php');
 
         // bottom button option
         if($hasButton){
