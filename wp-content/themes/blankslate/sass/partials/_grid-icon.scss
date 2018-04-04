@@ -1,4 +1,7 @@
 .icon_grid {
+  max-width: 1000px;
+  width: 80vw;
+  margin: 0 auto;
   .inner {
     .text-wrapper {
 
@@ -19,36 +22,61 @@
 
       &.col-3 {
         .icon-block {
-          max-width: 33.3%;
-          flex: 0 0 33%;
+          max-width: 50%;
+          flex: 0 0 50%;
+
+          @media screen and (min-width: 768px){
+            max-width: 33.3%;
+            flex: 0 0 33%;
+          }
         }
       }
 
       &.col-4 {
         .icon-block {
-          max-width: 25%;
-          flex: 0 0 25%;
+          max-width: 50%;
+          flex: 0 0 50%;
+
+          @media screen and (min-width: 768px){
+            max-width: 25%;
+            flex: 0 0 25%;
+          }
         }
       }
 
       &.col-5 {
         .icon-block {
-          max-width: 20%;
-          flex: 0 0 20%;
+          max-width: 50%;
+          flex: 0 0 50%;
+
+          @media screen and (min-width: 768px){
+            max-width: 20%;
+            flex: 0 0 20%;
+          }
         }
       }
 
       &.col-6 {
         .icon-block {
-          max-width: 16.66%;
-          flex: 0 0 16.66%;
+          max-width: 50%;
+          flex: 0 0 50%;
+
+          @media screen and (min-width: 768px){
+            max-width: 16.66%;
+            flex: 0 0 16.66%;
+          }
         }
       }
 
       &.col-7 {
         .icon-block {
-          max-width: 14.28%;
-          flex: 0 0 14.28%;
+          max-width: 50%;
+          flex: 0 0 50%;
+
+          @media screen and (min-width: 768px){
+            max-width: 14.28%;
+            flex: 0 0 14.28%;
+          }
         }
       }
 

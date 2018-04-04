@@ -9,14 +9,14 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> style="min-height: 3000px;">
+<body <?php body_class(); ?>>
 <div id="wrapper" class="hfeed">
-<header id="header" role="banner">
-
-<nav id="menu" role="navigation">
-    TEST NAV
-</nav>
-
+<header id="primary-header" role="banner">
+    <div id="header-inner"></div>
+        <nav id="menu" role="navigation">
+            TEST NAV
+        </nav>
+    </div> <!-- .header-inner -->
 </header>
 <div id="container">
 

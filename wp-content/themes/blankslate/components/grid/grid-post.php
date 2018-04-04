@@ -26,7 +26,9 @@ if($postGrid){ ?>
                 while ( $the_query->have_posts() ) {
                     $the_query->the_post(); ?>
                     <div class="post-block">
-                        <?php echo get_the_title(); ?>
+                        <div class="post-inner">
+                            <?php echo get_the_title(); ?>
+                        </div><!-- .post-inner -->
                     </div><?php
                 }
                 wp_reset_postdata();
@@ -40,9 +42,11 @@ if($postGrid){ ?>
                 foreach($postSelection as $gridPost){
                     setup_postdata($gridPost); ?>
                     <div class="post-block">
-                        <?php echo get_the_title($gridPost);
-                        echo the_content(); ?>
-                    </div><?php
+                        <div class="post-inner">
+                            <?php echo get_the_title($gridPost);
+                            echo the_content(); ?>
+                        </div><!-- .post-inner -->
+                    </div><!-- .post-block --> <?php
                 } // endforeach
                 wp_reset_postdata();
 
