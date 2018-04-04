@@ -16,24 +16,19 @@ if($iconGrid){
             <div class="icon-block <?php echo $iteration; ?>"> <?php
                 if($colIcon){
                     if($isLink){ ?>
-                        <a class="icon-link" href="<?php echo get_permalink($linkSrc[0]); ?>">
-                            <div class="icon-wrapper"> <?php
-                                echo $colIconFull; ?>
-                            </div><!-- .icon-wrapper -->
-                        <?php
-                    } else { ?>
-                        <div class="icon-wrapper"> <?php
-                            echo $colIconFull; ?>
-                        </div> <!-- .icon-wrapper --> <?php
-                        }
+                        <a class="icon-link" href="<?php echo get_permalink($linkSrc[0]); ?>"><?php
+                    } ?>
+
+                    <div class="icon-wrapper"> <?php
+                        echo $colIconFull; ?>
+                    </div> <!-- .icon-wrapper --> <?php
                     }
 
-                    if($colHeader){
+                    if($colHeader){ ?>
+                        <p class="col-header"><?php echo $colHeader;?></p><?php
+
                         if($isLink){ ?>
-                            <p class="col-header"><?php echo $colHeader;?></p>
                             </a><!-- .icon-link--><?php
-                        } else { ?>
-                            <p class="col-header"><?php echo $colHeader;?></p><?php
                         }
                     }
 
